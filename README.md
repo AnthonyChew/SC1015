@@ -1,6 +1,6 @@
 # SC1015 DSAI Mini-Project AY2021-22
 
-Team 6: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
+Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
 
 # Table of Contents
 
@@ -36,7 +36,7 @@ We would also like to thank our TALUO TIANZE for constantly encouraging us to ex
 approaching our problems and this Mini-Project would not have been possible without her valuable feedback and expertise
 in the field of Data Science.
 
-# Team 6 Members
+# Team 1 Members
 
 | Name                 |              Area of Focus               |GitHub Acount|
 |----------------------|:----------------------------------------------------:|---|
