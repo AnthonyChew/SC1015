@@ -70,24 +70,18 @@ For our data preparation, there were a few issues that we have to tackle.
 - utilities
 - autdio production
 - software training
-2. One hotting columns including `genre`, `language`(top used language).
-Genre
-- Casual
-- Indie
-- Free To Play
-- RPG
-- Strategy
-- Sports
-- Simulation
-- Racing
-- Massivley Multiplayer
-Language
-- English
-- Chinese
-- French
-- German
-- Italian
-- Spanish
+2. Onehot columns including `genre`, `language`(top used language).
+
+| Genre                  |              Language              |
+|------------------------|:----------------------------------:|
+| - Casual               | - English                          |
+| - Indie                | - Chinese                          |
+| - RPG                  | - French                           |
+| - Strategy             | - German                           |
+| - Sports               | - Italian                          |
+| - Simulation           | - Spanish                          |
+| - Racing               |                                    |
+| - Massivley Multiplayer|                                    |
 3. Merging similar columns 
 - Action  & adventure -- Act_Adv
 - violent & gore & sexual content & nudity -- 18+
@@ -105,6 +99,7 @@ Language
 - 50000001-20000000: 10
 - 20000001-100000000: 11 
 - 100000001-200000000: 12
+
 5.Creating a `review` column which is the score of positive review out of 100%.
 > *The formula that we came out is review_score = (positive score / positive score * negativescore) * 100*
 
