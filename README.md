@@ -74,14 +74,14 @@ For our data preparation, there were a few issues that we have to tackle.
 
 | Genre                  |              Language              |
 |------------------------|:----------------------------------:|
-| - Casual               | - English                          |
-| - Indie                | - Chinese                          |
-| - RPG                  | - French                           |
-| - Strategy             | - German                           |
-| - Sports               | - Italian                          |
-| - Simulation           | - Spanish                          |
-| - Racing               |                                    |
-| - Massivley Multiplayer|                                    |
+|   Casual               |   English                          |
+|   Indie                |   Chinese                          |
+|   RPG                  |   French                           |
+|   Strategy             |   German                           |
+|   Sports               |   Italian                          |
+|   Simulation           |   Spanish                          |
+|   Racing               |                                    |
+|   Massivley Multiplayer|                                    |
 3. Merging similar columns 
 - Action  & adventure -- Act_Adv
 - violent & gore & sexual content & nudity -- 18+
