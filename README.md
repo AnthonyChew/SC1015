@@ -5,7 +5,7 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
 # Table of Contents
 
 - [Welcome Message](#welcome-message)
-- [Team 6 Members](#team-6-members)
+- [Team 1 Members](#team-1-members)
 - [Question/Problem Definition](#questionproblem-definition)
 - [Dataset Selection & Preparation](#dataset-selection--preparation)
     - [Kaggle](https://www.kaggle.com/datasets/teyang/singapore-hdb-flat-resale-prices-19902020)
