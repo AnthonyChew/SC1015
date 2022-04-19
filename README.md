@@ -72,35 +72,42 @@ For our data preparation, there were a few issues that we have to tackle.
 - utilities
 - audio production
 - software training
-2. One hot columns including `genre`, `language`(top used language).
+2. One hot columns including `genre` and `language`.
 
-| Genre                  |              Language              |
-|------------------------|:----------------------------------:|
-|   Casual               |   English                          |
-|   Indie                |   Chinese                          |
-|   RPG                  |   French                           |
-|   Strategy             |   German                           |
-|   Sports               |   Italian                          |
-|   Simulation           |   Spanish                          |
-|   Racing               |                                    |
-|   Massively Multiplayer|                                    |
+| Genre                  | Language (top used language)       |
+|:------------------------:|:----------------------------------:|
+|       Casual             |   English                          |
+|       Indie              |   Chinese                          |
+|       RPG                |   French                           |
+|       Strategy           |   German                           |
+|       Sports             |   Italian                          |
+|       Simulation         |   Spanish                          |
+|       Racing             |                                    |
+|   Massively Multiplayer  |                                    |
 3. Merging similar columns 
-- Action & adventure -- Act_Adv
-- violent & gore & sexual content & nudity -- 18+
-4. Converting estimated owners to categorical data 
-- 0-20000: 0
-- 20001-50000: 1
-- 50001-100000: 2
-- 100001-200000: 3
-- 200001-500000: 4
-- 500001-1000000: 5
-- 1000001-2000000: 6 
-- 2000001-5000000: 7 
-- 5000001-10000000: 8 
-- 10000001-50000000: 9 
-- 50000001-20000000: 10
-- 20000001-100000000: 11 
-- 100000001-200000000: 12
+
+| Columns                  | New Column Name                    |
+|:------------------------:|:----------------------------------:|
+|   Action & Adventure     |   Act_Adv                          |
+|   Violent & Gore & Sexual Content & Nudity  |   18+           |
+5. Converting estimated owners to categorical data 
+
+| Estimated Owners         | Maps To                            |
+|:------------------------:|:----------------------------------:|
+|       0-20000                |   0                            |
+|       20001-50000            |   1                            |
+|       50001-100000           |   2                            |
+|       100001-200000          |   3                            |
+|       200001-500000          |   4                            |
+|       500001-1000000         |   5                            |
+|       1000001-2000000        |   6                            |
+|       2000001-5000000        |   7                            |
+|       5000001-10000000       |   8                            |
+|       10000001-50000000      |   9                            |
+|       50000001-20000000      |   10                           |
+|       20000001-100000000     |   11                           |
+|       100000001-200000000    |   12                           |
+
 
 5.Creating a `review` column which is the score of positive review out of 100%.
 > The formula that we came out is `review_score = (positive score / positive score * negative score) * 100` round up to full number.
