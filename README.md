@@ -8,7 +8,9 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
 - [Team 1 Members](#team-1-members)
 - [Question/Problem Definition](#questionproblem-definition)
 - [Dataset Selection & Preparation](#dataset-selection--preparation)
-    - [Kaggle](https://www.kaggle.com/datasets/teyang/singapore-hdb-flat-resale-prices-19902020)
+    - [Game Data(CSV)](https://github.com/AnthonyChew/SC1015/blob/main/GameData_backup_with_review.csv)
+    - [SteamSpy Data Collection](https://github.com/AnthonyChew/SC1015/blob/main/SteamSpyDataCollection.ipynb)
+    - [Data Cleaning](https://github.com/AnthonyChew/SC1015/blob/main/DataCleanUp.ipynb)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
     - [EDA.ipynb](https://github.com/BLTech-py/sc1015/blob/main/EDA.ipynb)
     - [Flat Type](#flat-type)
@@ -55,56 +57,58 @@ If you are a indie/big game company coming out with a new game what is the predi
 After extensive online searching, our team could find existing dataset that is suitable to our use case. So, we decide to collect our own dataset from [SteamSpy](https://steamspy.com/) which is based on [Steam](https://store.steampowered.com/) but with estimated `Owners`.
 
 However, a few issues were faced while we were during data collection.
-1. There is no API that reaturns all released game. So we wrote our own code to do a webscraping on the `appid` of games released from 2008-2022. And with the `appid` collected we covert all `JSON` response to `CSV`.
+1. There is no API that returns all released game. So we wrote our own code to do a web scraping on the `appid` of games released from 2008-2022. And with the `appid` collected we covert all `JSON` response to `CSV`.
 2. Issues with response from `JSON` that `price` and `initialprice` have the value of `.` which is `0.99`. We had do string matching and change it to `0.99`.
 3. Encoding issue. There are games with `English`, `Russian` and `Chinese` names. Thus we need to use `ANSI` encoding instead of `UTF-8`.
 
 For our data preparation, there were a few issues that we have to tackle.
 1. Removed unrelated data (including test server, play test)
 - accounting
-- animation & modeling
-- game developlemnt
+- animation & modelling
+- game development
 - video production
 - photo editing
-- web-publisting
+- web-publishing
 - utilities
-- autdio production
+- audio production
 - software training
-2. One hotting columns including `genre`, `language`(top used language).
-Genre
-- Casual
-- Indie
-- Free To Play
-- RPG
-- Strategy
-- Sports
-- Simulation
-- Racing
-- Massivley Multiplayer
-Language
-- English
-- Chinese
-- French
-- German
-- Italian
-- Spanish
+2. One hot columns including `genre` and `language`.
+
+| Genre                  | Language (top used language)       |
+|:------------------------:|:----------------------------------:|
+|       Casual             |   English                          |
+|       Indie              |   Chinese                          |
+|       RPG                |   French                           |
+|       Strategy           |   German                           |
+|       Sports             |   Italian                          |
+|       Simulation         |   Spanish                          |
+|       Racing             |                                    |
+|   Massively Multiplayer  |                                    |
 3. Merging similar columns 
-- Action  & adventure -- Act_Adv
-- violent & gore & sexual content & nudity -- 18+
-4. Converting estimated owners to categorical data 
-- 0-20000: 0
-- 20001-50000: 1
-- 50001-100000: 2
-- 100001-200000: 3
-- 200001-500000: 4
-- 500001-1000000: 5
-- 1000001-2000000: 6 
-- 2000001-5000000: 7 
-- 5000001-10000000: 8 
-- 10000001-50000000: 9 
-- 50000001-20000000: 10
-- 20000001-100000000: 11 
-- 100000001-200000000: 12
+
+| Columns                  | New Column Name                    |
+|:------------------------:|:----------------------------------:|
+|   Action & Adventure     |   Act_Adv                          |
+|   Violent & Gore & Sexual Content & Nudity  |   18+           |
+5. Converting estimated owners to categorical data 
+
+| Estimated Owners         | Maps To                            |
+|:------------------------:|:----------------------------------:|
+|       0-20000                |   0                            |
+|       20001-50000            |   1                            |
+|       50001-100000           |   2                            |
+|       100001-200000          |   3                            |
+|       200001-500000          |   4                            |
+|       500001-1000000         |   5                            |
+|       1000001-2000000        |   6                            |
+|       2000001-5000000        |   7                            |
+|       5000001-10000000       |   8                            |
+|       10000001-50000000      |   9                            |
+|       50000001-20000000      |   10                           |
+|       20000001-100000000     |   11                           |
+|       100000001-200000000    |   12                           |
+
+
 5.Creating a `review` column which is the score of positive review out of 100%.
-> *The formula that we came out is review_score = (positive score / positive score * negativescore) * 100*
+> The formula that we came out is `review_score = (positive score / positive score * negative score) * 100` round up to full number.
 
