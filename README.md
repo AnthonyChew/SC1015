@@ -150,7 +150,7 @@ Priced games(Owned by more than 1m people): 1967
 
 We can see that more than 50% for the games realease had the genre under `Indie` or `Action & Adventure`.
 
-![image](https://github.com/AnthonyChew/SC1015/tree/main/img/graphs/Genre-2022-04-22)
+![image](https://github.com/AnthonyChew/SC1015/blob/main/img/graphs/Genre-2022-04-22.png)
 
 <ins>Genre percentage in original data</ins>
 
@@ -170,7 +170,7 @@ Massively Multiplayer:  2.83%
 
 But when we look at games owned by more than 1 million people. The trend is dominated by `Action & Adventure` close to 73% of games had the genre.
 
-![image](https://github.com/AnthonyChew/SC1015/tree/main/img/graphs/Genre-2022-04-22)
+![image](https://github.com/AnthonyChew/SC1015/blob/main/img/graphs/GenreOverAll-2022-04-22.png)
 
 <ins>Genre percentage in data owned by more than 1 million people</ins>
 
