@@ -23,7 +23,8 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
     - [Confusion Matrix](#confusion-matrix)
 - [Insights of Data & Conclusion](#insights-of-data--conclusion)
 - [Closing Remarks](#closing-remarks)
-- 
+- Extra(#extra)
+
 # Welcome Message
 
 Welcome to team 1's DSAI Mini-Project. This Mini-Project allowed our team to venture beyond the syllabus of
@@ -268,3 +269,19 @@ From this Mini-Project we can learn a few things:
 # Closing Remarks
 
 This Mini-Project couldn't be done with one mans' effort but the whole team. I would like to thanks my teammates for the contribution to the project although we found out that we have used the wrong model. It is truely a good learning experice for me and my teamates. And the most important lesson that we have learn is to pay more atthention to our EDA so that we choose the right model for the problems we want to solve.
+
+#Extra
+
+Here are some extra EDA, decision tree and random forest jupyter notebooks that our team did to further explore our dataset.
+
+<ins>Jupyter notebooks</ins>
+- [Desicion Tree](https://github.com/AnthonyChew/SC1015/blob/main/Archive/Haoyi_code/HY_DecTree.ipynb)
+- [Random Forest](https://github.com/AnthonyChew/SC1015/blob/main/Archive/Haoyi_code/HY_randomforest.ipynb)
+- [EDA](https://github.com/AnthonyChew/SC1015/blob/main/Archive/Haoyi_code/HY_EDA_comparison.ipynb)
+
+Refrence:
+- https://steamspy.com/
+- https://seaborn.pydata.org/
+- https://it-qa.com/when-to-use-mlpclassifier-in-a-neural-net/
+- https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+
