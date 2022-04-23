@@ -16,7 +16,7 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
     - [General Trend](#general-trend)
     - [Diving deeper into genre](#diving-deeper-into-genre)
 - [Classification Algorithms](#classification-algorithms)
-    - [Decision Tree Classifier](decision-tree-classifier)
+    - [Decision Tree Classifier](#decision-tree-classifier)
     - [Random Forest Classifier](#random-forest-classifier)
 - [Machine Learning](#machine-learning)
     - [MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/MLP.ipynb)
