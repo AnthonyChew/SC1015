@@ -16,10 +16,10 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
     - [General Trend](#general-trend)
     - [Diving deeper into genre](#diving-deeper-into-genre)
 - [Classification Algorithms](#classification-algorithms)
-    - [Decision Tree Classifier](#decision-tree-classifier)
-    - [Random Forest Classifier](#random-forest-classifier)
+    - [Decision Tree Classifier](https://github.com/AnthonyChew/SC1015/blob/main/4_DecTree_randomForest.ipynb)
+    - [Random Forest Classifier](https://github.com/AnthonyChew/SC1015/blob/main/4_DecTree_randomForest.ipynb)
 - [Machine Learning](#machine-learning)
-    - [MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/MLP.ipynb)
+    - [MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/5_MLP.ipynb)
     - [MLPClassifier Introduction](#mlpclassifier-introduction)
     - [Value Optimisation](#value-optimisation)
     - [Classification Report](#classification-report)
@@ -118,7 +118,7 @@ Free to Play
 
 # Exploratory Data Analysis
 
-## For our Exploratory Data Analysis we conducted it in jupyter notebook titled [EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/3_EDA.ipynb).
+## For our Exploratory Data Analysis we conducted it in jupyter notebook titled [3_EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/3_EDA.ipynb).
 
 As the focus of our project is to predict the number of owners per game, we first plotted the estimated number of users for the games.
 
@@ -207,7 +207,7 @@ As our target is to predict how popular a game would be so as to calculate their
 
 ## Decision Tree Classifier
 
-Decision Trees are a non-parametric supervised learning method used for classification. We chose to use [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) and the code is stored in a jupyter notebook file titled [DecTree _ randomForest.ipynb] (https://github.com/AnthonyChew/SC1015/blob/main/DecTree_randomForest.ipynb).
+Decision Trees are a non-parametric supervised learning method used for classification. We chose to use [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) and the code is stored in a jupyter notebook file titled [4_DecTree _ randomForest.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/4_DecTree_randomForest.ipynb).
 
 For our Decision Tree, we will be using Multi-Variate Decision Tree to predict the number of owners per game, with multiple predictors such as `game reviews`, `game genres`, `available languages`, `game price`.
 
@@ -244,7 +244,7 @@ We then used the data set with the `owner` category one-hot encoded. The result 
 
 # Machine Learning
 
-The machine learning model that we have chosen is [MLPClassifier](https://www.analyticsvidhya.com/blog/2020/12/mlp-multilayer-perceptron-simple-overview/) and the jupyter notebook is titled [MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/MLP.ipynb).
+The machine learning model that we have chosen is [MLPClassifier](https://www.analyticsvidhya.com/blog/2020/12/mlp-multilayer-perceptron-simple-overview/) and the jupyter notebook is titled [5_MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/5_MLP.ipynb).
 
 ## MLPClassifier Introduction
 
@@ -286,7 +286,7 @@ MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
 
 hidden_layer_sizes was set to 6 because for the hidden layers between the starting and ending layer, we need to fit the 4 different types of predictors that we are using, which are the `positive`, `price`, `total_lang`,`onehot genre`.
 
-For solver, we chose `adam` as our stochastic gradient-based optimizer as it worked well with our dataset, yelding the highest accuracy between the 4 available solvers.
+For solver, we chose `adam` as our stochastic gradient-based optimizer as it worked well with our dataset, yielding the highest accuracy between the 4 available solvers.
 
 We played around with the rest of the values and the best accuracy we got was 74%.
 
