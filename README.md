@@ -270,7 +270,7 @@ From this Mini-Project we can learn a few things:
 
 This Mini-Project couldn't be done with one mans' effort but the whole team. I would like to thanks my teammates for the contribution to the project although we found out that we have used the wrong model. It is truely a good learning experice for me and my teamates. And the most important lesson that we have learn is to pay more atthention to our EDA so that we choose the right model for the problems we want to solve.
 
-#Extra
+# Extra
 
 Here are some extra EDA, decision tree and random forest jupyter notebooks that our team did to further explore our dataset.
 
