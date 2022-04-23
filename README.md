@@ -23,7 +23,7 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
     - [Confusion Matrix](#confusion-matrix)
 - [Insights of Data & Conclusion](#insights-of-data--conclusion)
 - [Closing Remarks](#closing-remarks)
-- Extra(#extra)
+- [Extra](#extra)
 
 # Welcome Message
 
