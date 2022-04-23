@@ -15,6 +15,9 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
     - [EDA.ipynb](https://github.com/BLTech-py/sc1015/blob/main/EDA.ipynb)
     - [General Trend](#general-trend)
     - [Diving deeper into genre](#diving-deeper-into-genre)
+- [Classification Algorithms](#classification-algorithms)
+    - [Decision Tree Classifier](decision-tree-classifier)
+    - [Random Forest Classifier](#random-forest-classifier)
 - [Machine Learning](#machine-learning)
     - [MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/MLP.ipynb)
     - [MLPClassifier Introduction](#mlpclassifier-introduction)
@@ -196,7 +199,6 @@ Racing:                 2.71%
 18+:                    0.0%
 ```
 ###### Disclaimer: Percentages add up to more than 100 as most games have overlapping genres
-
 
 # Classification Algorithms
 
