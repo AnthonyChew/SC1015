@@ -33,7 +33,7 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
 Welcome to team 1's DSAI Mini-Project. This Mini-Project allowed our team to venture beyond the syllabus of
 this course to gain insightful skills and knowledge through analyzing real-world trends and data.
 
-We would also like to thank our TALUO TIANZE for constantly encouraging us to experiment with new methods in
+We would also like to thank our TA LUO TIANZE for constantly encouraging us to experiment with new methods in
 approaching our problems. This Mini-Project would not have been possible without his valuable feedback and expertise
 in the field of Data Science.
 
