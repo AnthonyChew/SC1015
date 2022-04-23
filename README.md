@@ -9,10 +9,10 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
 - [Question/Problem Definition](#questionproblem-definition)
 - [Dataset Selection & Preparation](#dataset-selection--preparation)
     - [Game Data(CSV)](https://github.com/AnthonyChew/SC1015/blob/main/GameData_backup_with_review.csv)
-    - [SteamSpy Data Collection](https://github.com/AnthonyChew/SC1015/blob/main/SteamSpyDataCollection.ipynb)
-    - [Data Cleaning](https://github.com/AnthonyChew/SC1015/blob/main/DataCleanUp.ipynb)
+    - [SteamSpy Data Collection](https://github.com/AnthonyChew/SC1015/blob/main/1_SteamSpyDataCollection.ipynb)
+    - [Data Cleaning](https://github.com/AnthonyChew/SC1015/blob/main/2_DataCleanUp.ipynb)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
-    - [EDA.ipynb](https://github.com/BLTech-py/sc1015/blob/main/EDA.ipynb)
+    - [EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/3_EDA.ipynb)
     - [General Trend](#general-trend)
     - [Diving deeper into genre](#diving-deeper-into-genre)
 - [Classification Algorithms](#classification-algorithms)
@@ -118,7 +118,7 @@ Free to Play
 
 # Exploratory Data Analysis
 
-## For our Exploratory Data Analysis we conducted it in jupyter notebook titled [EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/EDA.ipynb).
+## For our Exploratory Data Analysis we conducted it in jupyter notebook titled [EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/3_EDA.ipynb).
 
 As the focus of our project is to predict the number of owners per game, we first plotted the estimated number of users for the games.
 
