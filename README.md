@@ -309,7 +309,7 @@ We played around with the rest of the values and the best accuracy we got was 74
 - F1-score: Percentage of predictions that were correct
 - Support: Number of actual occurrences  
 
-##Confusion Matrix
+## Confusion Matrix
 
 ![image](https://github.com/AnthonyChew/SC1015/blob/main/img/graphs/MLP_confusion_2022-04-23_10-30-00.png)
 
