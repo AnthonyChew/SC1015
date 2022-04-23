@@ -115,14 +115,15 @@ Free to Play
 
 # Exploratory Data Analysis
 
-For our Exploratory Data Analysis we conducted it in jupyter notebook titled [EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/EDA.ipynb)
-These are our findings:
-
-Estimated amount of owners:
+## For our Exploratory Data Analysis we conducted it in jupyter notebook titled [EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/EDA.ipynb).
 
 As the focus of our project is to predict the number of owners per game, we first plotted the estimated number of users for the games.
 
-<ins>Number of Data Points(games) for each estimated range</ins>
+## These are our findings:
+
+##Estimated amount of owners:
+
+<ins>Number of Data Points(games) for each estimated range</ins>:
 
 ```
 0-20000                   28246                           
@@ -145,7 +146,7 @@ As the focus of our project is to predict the number of owners per game, we firs
 
 As we can see from the table above, most games released in steam has owner in the range of 0-20000. 
 
-Our team tried to look at games that owned by more than 1 million people. This is the results we've got:
+Our team tried to look at games that owned by more than 1 million people. This is the results that we got:
 ```
 Free game(Owned by more than 1m people): 669
 Priced games(Owned by more than 1m people): 1967
