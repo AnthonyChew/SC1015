@@ -13,29 +13,24 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
     - [Data Cleaning](https://github.com/AnthonyChew/SC1015/blob/main/DataCleanUp.ipynb)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
     - [EDA.ipynb](https://github.com/BLTech-py/sc1015/blob/main/EDA.ipynb)
-    - [Flat Type](#flat-type)
-    - [Town](#town)
     - [General Trend](#general-trend)
-    - [Interesting Outlier](#interesting-outlier)
+    - [Diving deeper into genre](#diving-deeper-into-genre)
 - [Machine Learning](#machine-learning)
-    - [ARIMA.ipynb](https://github.com/BLTech-py/sc1015/blob/main/ARIMA.ipynb)
-    - [ARIMA Introduction](#arima-introduction)
-    - [Best Blk for ML](#best-blk-for-ml)
-    - [p, d, q value Optimisation](#p-d-q-value-optimisation)
-    - [Obtaining Test Data](#obtaining-test-data)
-    - [Future Price Prediction](#future-price-predictionfuture-price-prediction)
+    - [MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/MLP.ipynb)
+    - [MLPClassifier Introduction](#mlpclassifier-introduction)
+    - [Value Optimisation](#value-optimisation)
+    - [Classification Report](#classification-report)
+    - [Confusion Matrix](#confusion-matrix)
 - [Insights of Data & Conclusion](#insights-of-data--conclusion)
 - [Closing Remarks](#closing-remarks)
-- [Version History](#version-history)
-- [Extras](#extras)
-
+- 
 # Welcome Message
 
-Welcome to team 1's DSAI Mini-Project. This Mini-Project gave our team the opportunity to venture beyond the syllabus of
-this course to gain insightful skills and knowledge through the analysis of real world trends and data.
+Welcome to team 1's DSAI Mini-Project. This Mini-Project allowed our team to venture beyond the syllabus of
+this course to gain insightful skills and knowledge through analyzing real-world trends and data.
 
 We would also like to thank our TALUO TIANZE for constantly encouraging us to experiment with new methods in
-approaching our problems and this Mini-Project would not have been possible without his valuable feedback and expertise
+approaching our problems, and this Mini-Project would not have been possible without his valuable feedback and expertise
 in the field of Data Science.
 
 # Team 1 Members
@@ -44,27 +39,27 @@ in the field of Data Science.
 |----------------------|:----------------------------------------------------:|---|
 | Chew Zhi Qi          | Data Collection, Machine Learning, GitHub Repository |@AnthonyChew|
 | Koh Jia Wei          | Google Slides, Video Presentation, EDA               |@KohJiaWei|
-| Gan Hao Yi           | EDA, Data Clean Up, Google Slides                    |@Bghy99|
+| Gan Hao Yi           | EDA, Data Clean-Up, Google Slides                    |@Bghy99|
 
 # Question/Problem Definition
 
-If you are a indie/big game company coming out with a new game what is the prediceted sales for that game and realease it on Steam Platform. This piqued our team's curiosity on the sale tread of gaming industry, leading us to our question:
+If you are an indie/big game company coming out with a new game, what are the estimated owner for that game and release it on Steam Platform. This piqued our team's curiosity about the sales tread of the gaming industry, leading us to our question:
 
-> *What is the best genre or type of game to come out wiht the current trend to maximize profit?*
+> *What is the best genre or type of game to come out with the current trend to maximize profit?*
 
 # Dataset Selection & Preparation
 
-After extensive online searching, our team could find existing dataset that is suitable to our use case. So, we decide to collect our own dataset from [SteamSpy](https://steamspy.com/) which is based on [Steam](https://store.steampowered.com/) but with estimated `Owners`.
+After extensive online searching, our team could find an existing dataset suitable for our use case. So, we decided to collect our dataset from [SteamSpy](https://steamspy.com/), which is based on [Steam](https://store.steampowered.com/) but with estimated `Owners`.
 
-However, a few issues were faced while we were during data collection.
-1. There is no API that returns all released game. So we wrote our own code to do a web scraping on the `appid` of games released from 2008-2022. And with the `appid` collected we covert all `JSON` response to `CSV`.
-2. Issues with response from `JSON` that `price` and `initialprice` have the value of `.` which is `0.99`. We had do string matching and change it to `0.99`.
+However, we faced a few issues while we were during data collection.
+1. No API returns all released games. So we wrote our code to do a web scraping on the `appid` of games released from 2008-2022. And with the `appid` collected, we covert all `JSON` responses to `CSV`.
+2. Issues with response from `JSON` that `price` and `initial price` have the value of `.`,  `0.99`. We had to do string matching and change it to `0.99`.
 3. Encoding issue. There are games with `English`, `Russian` and `Chinese` names. Thus we need to use `ANSI` encoding instead of `UTF-8`.
 
-For our data preparation, there were a few issues that we have to tackle.
-1. Removed unrelated data (including test server, play test)
+For our data preparation, there were a few issues that we had to tackle.
+1. Removed unrelated data (including test server, playtest)
 - accounting
-- animation & modelling
+- animation & modeling
 - game development
 - video production
 - photo editing
@@ -215,8 +210,61 @@ In order for the MLPClassifier model to give a good prediction, we need to have 
 
 After a few rounds of playing witht he amount of hidden layer, solver and activation function. We have one of the best results with:
 
+```
+MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+              beta_2=0.999, early_stopping=False, epsilon=1e-08,
+              hidden_layer_sizes=6, learning_rate='adaptive',
+              learning_rate_init=0.01, max_fun=15000, max_iter=200,
+              momentum=0.9, n_iter_no_change=10, nesterovs_momentum=True,
+              power_t=0.5, random_state=3, shuffle=True, solver='adam',
+              tol=0.0001, validation_fraction=0.1, verbose=False,
+              warm_start=False)
+```
+
 - hidden_layer_sizes: 6
 - activation: relu
 - solver: adam
 
-For solver `adam` was chose because it work well with our large dataset. The rest of the values we just played around to get the best accuracy up to 0.738
+Hidden layer sizes= 6 because `n_layers - 2` we used `positive`, `price`, `total_lang`,`onehot genre`.For solver `adam` was chose because it work well with our large dataset. The rest of the values we just played around to get the best accuracy which is 0.74.
+
+##Classification Report
+
+|       |Precision  |  Recall | F1-score  | Support| 
+|-------|---------|-----------|--------|-------|
+|0      |  0.84   |   0.98    |  0.90  |   8445|
+|1      |  0.32   |   0.64    |  0.43  |    504|
+|2      |  0.40   |   0.18    |  0.25  |   1602|
+|3      |  0.33   |   0.09    |  0.14  |    817|
+|4      |  0.00   |   0.00    |  0.00  |    224|
+|5      |  0.30   |   0.35    |  0.32  |    538|
+|6      |  0.00   |   0.00    |  0.00  |    142|
+|7      |  0.00   |   0.00    |  0.00  |     13|
+|8      |  0.00   |   0.00    |  0.00  |     89|
+|9      |  0.00   |   0.00    |  0.00  |      2|
+|10     |  0.00   |   0.00    |  0.00  |      7|
+
+- Precision: Accuracy of predictions
+- Recall: Fraction that were correctly identified
+- F1-score: Percent of predictions were correct
+- Supoort: Number os actual occurrences  
+
+##Confusion Matrix
+
+![image](https://github.com/AnthonyChew/SC1015/blob/main/img/graphs/MLP_confusion_2022-04-23_10-30-00.png)
+
+From the confusion matrix we can see that the data predict mostly are in `Owner_cat 0` due to most of the data resides there. It make sense that with the same genre, and language support it will be predicted as 0 instead of a higher estimated owner. 
+
+# Insights of Data & Conclusion
+
+From this Mini-Project we can learn a few things:
+
+1. Due to most of the data falls under the category of `0-20000` resutling our model has high accuracy on low owner category(`0`) and close to non on high owner category(>= 6).
+2. We can also conclude that there is a high percentage for a game to fall into the estimated range of 0 - 50k owners.
+
+#Things to be done better
+1. To increase infomation for the games that we have collected. E.g. (Is it a sequal, Esports, Remaster, Good story, Good gameplay, replayability, Online, MOBA). There are more factors that could affect a game with good sales.
+2. Change the model to a outlier predicting model like `Automatic Outlier Detection`. Becuase games that have high amount of estimated owners are consider outliars.
+
+# Closing Remarks
+
+This Mini-Project couldn't be done with one mans' effort but the whole team. I would like to thanks my teammates for the contribution to the project although we found out that we have used the wrong model. It is truely a good learning experice for me and my teamates. And the most important lesson that we have learn is to pay more atthention to our EDA so that we choose the right model for the problems we want to solve.
