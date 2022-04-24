@@ -348,9 +348,9 @@ This Mini-Project could not have been done alone. I would like to thanks my team
 Here are some extra EDA, decision tree and random forest jupyter notebooks that our team did to further explore our dataset.
 
 <ins>Jupyter notebooks</ins>
-- [Desicion Tree](https://github.com/AnthonyChew/SC1015/blob/main/Archive/Haoyi_code/HY_DecTree.ipynb)
-- [Random Forest](https://github.com/AnthonyChew/SC1015/blob/main/Archive/Haoyi_code/HY_randomforest.ipynb)
-- [EDA](https://github.com/AnthonyChew/SC1015/blob/main/Archive/Haoyi_code/HY_EDA_comparison.ipynb)
+- [Desicion Tree](https://github.com/AnthonyChew/SC1015/blob/main/extra/Haoyi_code/HY_DecTree.ipynb)
+- [Random Forest](https://github.com/AnthonyChew/SC1015/blob/main/extra/Haoyi_code/HY_randomforest.ipynb)
+- [EDA](https://github.com/AnthonyChew/SC1015/blob/main/extra/Haoyi_code/HY_EDA_comparison.ipynb)
 
 Reference:
 - https://steamspy.com/
