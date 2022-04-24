@@ -334,13 +334,13 @@ From this Mini-Project we can learn a few things:
 
 
 # Things to be done better
-1. To increase infomation for the games that we have collected. E.g. (Is it a sequal, Esports, Remaster, Good story, Good gameplay, replayability, Online, MOBA). There are more factors that could affect a game with good sales.
+1. To increase infomation for the games that we have collected. E.g. (Is it a Sequel, Esports, Remaster, Good story, Good gameplay, replayability, Online, MOBA). There are more factors that could affect a game with good sales.
 2. Change the model to a outlier predicting model like `Automatic Outlier Detection`. Games that have high amount of estimated owners are consider outliers.
 
 
 # Closing Remarks
 
-This Mini-Project could not have been done alone. I would like to thanks my teammates for the contribution to the project although we found out that we have used the wrong model. It is truly a good learning experience for me and my teammates. The most important lesson  we learnt is to pay more attention to our EDA so that we choose the right model for the problems we want to solve.
+This Mini-Project could not have been done alone. I would like to thank my teammates for the contribution to the project even though we found out that we had used the wrong model. It is truly a good learning experience for me and my teammates. The most important lesson we learnt is to pay more attention to our EDA to choose the right model for the problems that we want to solve.
 
 
 # Extra
