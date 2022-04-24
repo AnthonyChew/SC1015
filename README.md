@@ -12,14 +12,15 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
     - [SteamSpy Data Collection](https://github.com/AnthonyChew/SC1015/blob/main/1_SteamSpyDataCollection.ipynb)
     - [Data Cleaning](https://github.com/AnthonyChew/SC1015/blob/main/2_DataCleanUp.ipynb)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
-    - [EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/3_EDA.ipynb)
+    - [3_EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/3_EDA.ipynb)
     - [General Trend](#general-trend)
     - [Diving deeper into genre](#diving-deeper-into-genre)
 - [Classification Algorithms](#classification-algorithms)
-    - [Decision Tree Classifier](https://github.com/AnthonyChew/SC1015/blob/main/4_DecTree_randomForest.ipynb)
-    - [Random Forest Classifier](https://github.com/AnthonyChew/SC1015/blob/main/4_DecTree_randomForest.ipynb)
+    - [4_4_DecTree_randomForest.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/4_DecTree_randomForest.ipynb)
+    - [Decision Tree Classifier](#decision-tree-classifier)
+    - [Random Forest Classifier](#random-forest-classifier)
 - [Machine Learning](#machine-learning)
-    - [MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/5_MLP.ipynb)
+    - [5_MLP.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/5_MLP.ipynb)
     - [MLPClassifier Introduction](#mlpclassifier-introduction)
     - [Value Optimisation](#value-optimisation)
     - [Classification Report](#classification-report)
@@ -27,6 +28,7 @@ Team 1: Chew Zhi Qi, Koh Jia Wei, Gan Hao Yi
 - [Insights of Data & Conclusion](#insights-of-data--conclusion)
 - [Closing Remarks](#closing-remarks)
 - [Extra](#extra)
+
 
 # Welcome Message
 
@@ -37,6 +39,7 @@ We would also like to thank our TA LUO TIANZE for constantly encouraging us to e
 approaching our problems. This Mini-Project would not have been possible without his valuable feedback and expertise
 in the field of Data Science.
 
+
 # Team 1 Members
 
 | Name                 |              Area of Focus               |GitHub Acount|
@@ -45,12 +48,14 @@ in the field of Data Science.
 | Koh Jia Wei          | EDA, Machine Learning, Google Slides, Video Presentation   |@KohJiaWei  |
 | Gan Hao Yi           | EDA, Data Clean-Up, Google Slides, Classification Analysis |@ghy99      |
 
+
 # Question/Problem Definition
 
 If you are a Game Developing company coming out with a new game, you would want to estimate the number of people installing the game on Steam Platform. 
 The idea of estimating this piqued our team's curiosity about the sales trend of the gaming industry, leading us to our question:
 
 > *What is the best genre or type of game to come out with the current trend to maximize profit?*
+
 
 # Dataset Selection & Preparation
 
@@ -116,6 +121,7 @@ Free to Play
 |     20000001-100000000       |   11                           |
 |     100000001-200000000      |   12                           |
 
+
 # Exploratory Data Analysis
 
 ## For our Exploratory Data Analysis we conducted it in jupyter notebook titled [3_EDA.ipynb](https://github.com/AnthonyChew/SC1015/blob/main/3_EDA.ipynb).
@@ -124,7 +130,7 @@ As the focus of our project is to predict the number of owners per game, we firs
 
 ## These are our findings:
 
-##Estimated amount of owners:
+## Estimated amount of owners:
 
 <ins>Number of Data Points(games) for each estimated range</ins>:
 
@@ -200,6 +206,7 @@ Racing:                 2.71%
 ```
 ###### Disclaimer: Percentages add up to more than 100 as most games have overlapping genres
 
+
 # Classification Algorithms
 
 After of EDA, we now know what are some of the possible attributes that might affect the number of owners per game, such as `genre`, `game price`, `total language supported` and `game reviews`. 
@@ -265,7 +272,7 @@ MLPClassifier consists of 3 variables which are used to fit the machine learning
 
 In order for the MLPClassifier model to give a good prediction, we need to use a model that was pre-trained. However, after extensive amount of research online, we could not find any pre-trained model. Thus our team had to train our own model.
 
-##Value Optimisation
+## Value Optimisation
 
 After a few rounds of testing with the number of hidden layers, type of solver and activation function, we have one of the best results with:
 
@@ -290,7 +297,7 @@ For solver, we chose `adam` as our stochastic gradient-based optimizer as it wor
 
 We played around with the rest of the values and the best accuracy we got was 74%.
 
-##Classification Report
+## Classification Report
 
 |       |Precision  |  Recall | F1-score  | Support| 
 |-------|---------|-----------|--------|-------|
@@ -317,6 +324,7 @@ We played around with the rest of the values and the best accuracy we got was 74
 
 From the confusion matrix, we can see that the data's predictions are mostly in `Owner_cat 0` due to most of the data residing there. It make sense that with the same genre and languages supported, it will be predicted as `category 0` instead of categories with higher estimated number of owners. 
 
+
 # Insights of Data & Conclusion
 
 From this Mini-Project we can learn a few things:
@@ -324,7 +332,8 @@ From this Mini-Project we can learn a few things:
 1. Due to most of the data falling under the category of `0-20000`, it resulted in our model having high accuracy on `low owner` category(`0`) and close to non on `high owner` category(>= 6).
 2. We can also conclude that there is a high percentage for a game to fall into the estimated range of 0 - 50k owners.
 
-#Things to be done better
+
+# Things to be done better
 1. To increase infomation for the games that we have collected. E.g. (Is it a sequal, Esports, Remaster, Good story, Good gameplay, replayability, Online, MOBA). There are more factors that could affect a game with good sales.
 2. Change the model to a outlier predicting model like `Automatic Outlier Detection`. Games that have high amount of estimated owners are consider outliers.
 
